@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Omaxe Centre Point Amausi, Lucknow. Premium Commercial Retail Shops and Studio Apartments near Amausi Airport. RERA Registered.">
+    <title>Omaxe Centre Point Amausi | Premium Commercial & Studio Apartments</title>
+    
+    <!-- Preconnect to important origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts with display swap for performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================= RESET & BASE ================= */
+        :root {
+            --primary: #f36f21;      /* Omaxe Orange */
+            --secondary: #1e293b;    /* Dark Slate */
+            --accent: #f4b400;       /* Gold/Yellow */
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --radius: 8px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * { box-sizing: border-box; }
+        
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--text-main);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 { margin: 0; font-weight: 800; color: var(--secondary); }
+        p { margin: 0 0 16px 0; }
+        a { text-decoration: none; transition: 0.2s ease; }
+        ul { list-style: none; padding: 0; margin: 0; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* ================= UTILITIES ================= */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        .btn-primary:hover { background: #d65a12; }
+
+        .btn-accent {
+            background: var(--accent);
+            color: #000;
+        }
+        .btn-accent:hover { background: #d9a000; }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            background: transparent;
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+        .section-padding { padding: 80px 0; }
+        .text-center { text-align: center; }
+
+        /* ================= NAVBAR ================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            z-index: 1000;
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo span { color: var(--secondary); }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--secondary);
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            margin-top: 70px;
+            position: relative;
+            background: linear-gradient(rgba(30, 41, 59, 0.7), rgba(30, 41, 59, 0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-tag {
+            background: var(--accent);
+            color: #000;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .hf-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        .hf-item i { color: var(--accent); }
+
+        /* ================= LEAD FORM & INPUTS ================= */
+        .lead-form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .lead-form-card h3 {
+            color: var(--secondary);
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+        
+        .lead-form-card p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        /* Floating Label Styles */
+        .form-group { 
+            position: relative;
+            margin-bottom: 15px; 
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 24px 16px 8px; /* Top padding for label space */
+            height: 56px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-family: inherit;
+            transition: 0.2s;
+            font-size: 16px;
+            background: #fff;
+            appearance: none;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(243, 111, 33, 0.1);
+        }
+
+        textarea.form-control {
+            height: auto;
+            min-height: 120px;
+        }
+
+        .form-label {
+            position: absolute;
+            left: 16px;
+            top: 18px;
+            color: #64748b;
+            font-size: 16px;
+            pointer-events: none;
+            transition: 0.25s ease all;
+            background: transparent;
+            line-height: 1.2;
+        }
+
+        /* When focused or has content (placeholder not shown) */
+        .form-control:focus ~ .form-label,
+        .form-control:not(:placeholder-shown) ~ .form-label {
+            top: 6px;
+            font-size: 12px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Adjust label for textarea */
+        textarea.form-control ~ .form-label {
+            top: 18px;
+        }
+
+        /* Hide default placeholder so :placeholder-shown works */
+        .form-control::placeholder {
+            color: transparent;
+        }
+
+        /* ================= HIGHLIGHTS ================= */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .highlight-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background: #fff7ed;
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        /* ================= OTHER PROJECTS ================= */
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+            border: 1px solid #f1f5f9;
+        }
+        .project-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+
+        .project-img-placeholder {
+            width: 100%;
+            height: 200px;
+            background: #cbd5e1; /* Placeholder grey */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        /* Use simple CSS patterns for placeholders to save bandwidth */
+        .bg-retail { background: linear-gradient(45deg, #f3f4f6 25%, #e5e7eb 25%, #e5e7eb 50%, #f3f4f6 50%, #f3f4f6 75%, #e5e7eb 75%, #e5e7eb 100%); background-size: 20px 20px; }
+        .bg-residential { background: radial-gradient(#e2e8f0 15%, transparent 16%), radial-gradient(#e2e8f0 15%, transparent 16%); background-color: #f8fafc; background-size: 20px 20px; background-position: 0 0, 10px 10px; }
+
+        .project-content { padding: 25px; }
+        .badge {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background: #e0f2fe;
+            color: #0369a1;
+            text-transform: uppercase;
+        }
+        .project-price {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 18px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* ================= FOOTER ================= */
+        .footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 60px 0 20px;
+            font-size: 14px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .footer h5 { color: white; font-size: 16px; margin-bottom: 20px; }
+        .footer a { color: #9ca3af; display: block; margin-bottom: 10px; }
+        .footer a:hover { color: white; }
+
+        .disclaimer {
+            border-top: 1px solid #374151;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        /* ================= MODAL ================= */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .modal.active { display: flex; opacity: 1; }
+        .modal-content {
+            background: white;
+            padding: 0;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.3s;
+        }
+        .modal.active .modal-content { transform: translateY(0); }
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #f1f5f9;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            color: #64748b;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 968px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero { text-align: center; padding-top: 20px; }
+            .hero p { margin: 0 auto 30px; }
+            .hero-features { justify-content: center; flex-wrap: wrap; }
+            .lead-form-card { max-width: 400px; margin: 0 auto; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .mobile-toggle { display: block; }
+            .hero h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+    <div class="container nav-content">
+        <div class="logo">
+            OMAXE <span>LUCKNOW</span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#overview">Overview</a>
+            <a href="#about">About Us</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#location">Location</a>
+            <a href="#" onclick="openModal()" class="btn btn-primary">Enquire Now</a>
+        </div>
+        <div class="mobile-toggle" onclick="toggleMenu()">
+            <span class="material-icons">menu</span>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="overview">
+    <div class="container">
+        <div class="hero-grid">
+            
+            <!-- Hero Text -->
+            <div class="hero-text">
+                <span class="hero-tag">New Launch</span>
+                <h1>Omaxe Centre Point Amausi</h1>
+                <p>Lucknow's new business destination. Premium Retail Shops and Luxury Studio Apartments located just 2 minutes from Amausi International Airport.</p>
+                
+                <div class="hero-features">
+                    <div class="hf-item"><i class="material-icons">flight</i> 2 Mins to Airport</div>
+                    <div class="hf-item"><i class="material-icons">directions_subway</i> Near Metro</div>
+                    <div class="hf-item"><i class="material-icons">percent</i> High Returns</div>
+                </div>
+
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: inherit;">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="tel:+919999535753" class="btn btn-outline"><i class="material-icons" style="font-size:16px; vertical-align:middle;">call</i> +91 9999-535-753</a>
+                </div>
+            </div>
+
+            <!-- Lead Form -->
+            <div class="lead-form-card">
+                <h3>Request Pricing & Floor Plan</h3>
+                <p>Fill the form to get instant callback & exclusive offers.</p>
+                <form id="hero-form">
+                    <div class="form-group">
+                        <input type="text" name="Name" class="form-control" placeholder=" " required>
+                        <label class="form-label">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="Phone" class="form-control" placeholder=" " required>
+                        <label class="form-label">+91 Phone Number</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Get Call Back</button>
+                    <p style="font-size: 11px; color: #94a3b8; margin-top: 10px; text-align: center;">
+                        <i class="material-icons" style="font-size: 10px;">lock</i> Your data is secure with us.
+                    </p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<!-- ABOUT US / HOW WE STAND OUT -->
+<section class="section-padding" id="about">
+    <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 50px;">
+            <span class="hero-tag" style="background: #e0f2fe; color: #0369a1; margin-bottom: 15px;">ABOUT US</span>
+            <h2 style="margin-bottom: 20px;">How we stand out</h2>
+            <p style="color: var(--text-light); font-size: 16px; line-height: 1.8;">
+                At Omaxe Lucknow, we redefine urban living with a perfect blend of luxury, comfort, and innovation. Our thoughtfully designed homes cater to modern lifestyles, offering world-class amenities and prime locations. With a legacy of trust and excellence, we create spaces that inspire and elevate your living experience. Explore a range of premium residences that bring your dream home to life in the heart of Lucknow.
+            </p>
+        </div>
+
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="icon-box"><span class="material-icons">apartment</span></div>
+                <h3>Unmatched Architectural Excellence</h3>
+                <p style="font-size: 14px; color: var(--text-light);">Our homes showcase cutting-edge designs, superior craftsmanship, and attention to detail, ensuring a perfect balance of aesthetics and functionality for a luxurious lifestyle.</p>
+            </div>
+
+            <div class="highlight-card">
+                <div class="icon-box"><span class="material-icons">place</span></div>
+                <h3>Prime Locations, Seamless Connectivity</h3>
+                <p style="font-size: 14px; color: var(--text-light);">Strategically located in Lucknow’s most sought-after areas, our properties offer easy access to key destinations, ensuring convenience and enhanced urban living.</p>
+            </div>
+
+            <div class="highlight-card">
+                <div class="icon-box"><span class="material-icons">verified_user</span></div>
+                <h3>A Legacy of Trust and Innovation</h3>
+                <p style="font-size: 14px; color: var(--text-light);">With years of experience in real estate, Omaxe is known for delivering quality, innovation, and timely project completion, making us a trusted name in luxury housing.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY SECTION -->
+<section class="section-padding" style="background: #f1f5f9;" id="gallery">
+    <div class="container">
+        <div class="text-center" style="margin-bottom: 50px;">
+            <h2>Project Gallery</h2>
+            <p style="color: var(--text-light);">Glimpses of Omaxe Centre Point Amausi</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            <!-- Gallery Item 1 -->
+            <div style="border-radius: 12px; overflow: hidden; height: 250px; box-shadow: var(--shadow);">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000&auto=format&fit=crop" alt="Exterior View" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <!-- Gallery Item 2 -->
+            <div style="border-radius: 12px; overflow: hidden; height: 250px; box-shadow: var(--shadow);">
+                <img src="https://images.unsplash.com/photo-1519567241046-7f570eee3d9f?q=80&w=1000&auto=format&fit=crop" alt="Retail Shops" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <!-- Gallery Item 3 -->
+            <div style="border-radius: 12px; overflow: hidden; height: 250px; box-shadow: var(--shadow);">
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1000&auto=format&fit=crop" alt="Studio Apartment" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <!-- Gallery Item 4 -->
+            <div style="border-radius: 12px; overflow: hidden; height: 250px; box-shadow: var(--shadow);">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop" alt="Food Court" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <!-- Gallery Item 5 -->
+            <div style="border-radius: 12px; overflow: hidden; height: 250px; box-shadow: var(--shadow);">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop" alt="Office Spaces" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <!-- Gallery Item 6 -->
+            <div style="border-radius: 12px; overflow: hidden; height: 250px; box-shadow: var(--shadow);">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" alt="Night View" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section-padding" style="background: white;">
+    <div class="container">
+        <div class="lead-form-card" style="max-width: 800px; margin: 0 auto; box-shadow: var(--shadow-hover);">
+            <div class="text-center" style="margin-bottom: 30px;">
+                <h3 style="font-size: 28px;">Get in Touch</h3>
+                <p>Have questions? Fill out the form below and we'll get back to you.</p>
+            </div>
+            
+            <form id="enquiry-form">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <input type="text" name="Name" class="form-control" placeholder=" " required>
+                        <label class="form-label">Name *</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="Phone" class="form-control" placeholder=" " required>
+                        <label class="form-label">Phone *</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" name="Email" class="form-control" placeholder=" ">
+                    <label class="form-label">Email</label>
+                </div>
+                
+                <div class="form-group">
+                    <textarea name="Message" class="form-control" rows="4" placeholder=" "></textarea>
+                    <label class="form-label">Message</label>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" style="min-width: 200px;">Submit Enquiry</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- LOCATION MAP INFO -->
+<section class="section-padding" id="location">
+    <div class="container">
+        <div class="hero-grid">
+            <div>
+                <h2>Unbeatable Connectivity</h2>
+                <p style="color: var(--text-light); margin-bottom: 25px;">Located in the heart of Amausi, connectivity is the biggest asset of Centre Point.</p>
+                
+                <ul style="display: flex; flex-direction: column; gap: 15px;">
+                    <li style="display: flex; align-items: center; gap: 10px;">
+                        <span class="material-icons" style="color: var(--primary);">flight_takeoff</span>
+                        <span><strong>2 Mins</strong> from Ch. Charan Singh Int. Airport</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px;">
+                        <span class="material-icons" style="color: var(--primary);">directions_bus</span>
+                        <span><strong>0 Mins</strong> from High Tech Bus Stand</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px;">
+                        <span class="material-icons" style="color: var(--primary);">train</span>
+                        <span><strong>2 Mins</strong> from Amausi Metro Station</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px;">
+                        <span class="material-icons" style="color: var(--primary);">add_road</span>
+                        <span><strong>2 Mins</strong> from Shaheed Path & Kanpur Road</span>
+                    </li>
+                </ul>
+            </div>
+            <div style="background: #e2e8f0; height: 300px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                <!-- Placeholder for Google Map Embed -->
+                <p style="color: #64748b; font-weight: 600;"><i class="material-icons" style="vertical-align: middle;">map</i> Interactive Map Integration</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h2 style="color: white; margin-bottom: 15px;">OMAXE</h2>
+                <p>Omaxe is one of India's leading real estate companies, having delivered over 120 million sq. ft. of real estate. Trust, Quality, and Innovation are the pillars of our legacy.</p>
+            </div>
+            <div>
+                <h5>Quick Links</h5>
+                <a href="#overview">Overview</a>
+                <a href="#about">About Us</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#location">Location</a>
+            </div>
+            <div>
+                <h5>Contact</h5>
+                <p><i class="material-icons" style="font-size: 14px; vertical-align: middle;">call</i> +91 9999-535-753</p>
+                <p><i class="material-icons" style="font-size: 14px; vertical-align: middle;">email</i> sales@omaxelucknow.com</p>
+                <p><i class="material-icons" style="font-size: 14px; vertical-align: middle;">location_on</i> Amausi, Kanpur Road, Lucknow</p>
+            </div>
+        </div>
+        <div class="disclaimer">
+            Disclaimer: This website belongs to an Authorized Channel Partner. It is for information purposes only and does not constitute an offer to avail any service. Prices mentioned are subject to change without notice. Images are for representation purposes only. RERA Reg No: UPRERAPRJ344049 (Cassia), UPRERAPRJ461785 (Hi Street).
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="enquireModal">
+    <div class="modal-content">
+        <div class="close-modal" onclick="closeModal()">×</div>
+        <div class="lead-form-card" style="box-shadow: none; border: none; padding-top: 40px;">
+            <h3 class="text-center">Enquire Now</h3>
+            <p class="text-center" id="modalSubtext">Enter details to unlock price list</p>
+            <form id="modal-form">
+                <div class="form-group">
+                    <input type="text" name="Name" class="form-control" placeholder=" " required>
+                    <label class="form-label">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="Phone" class="form-control" placeholder=" " required>
+                    <label class="form-label">Mobile Number</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="Email" class="form-control" placeholder=" ">
+                    <label class="form-label">Email Address</label>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Mobile Menu Toggle
+    function toggleMenu() {
+        const nav = document.getElementById('navLinks');
+        nav.classList.toggle('active');
+    }
+
+    // Modal Logic
+    const modal = document.getElementById('enquireModal');
+    const modalSubtext = document.getElementById('modalSubtext');
+
+    function openModal(projectName) {
+        if(projectName) {
+            modalSubtext.textContent = `Get details for ${projectName}`;
+        } else {
+            modalSubtext.textContent = "Enter details to unlock price list";
+        }
+        modal.classList.add('active');
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+    }
+
+    // Close modal on outside click
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+
+    // Google Sheet Integration
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwa4BsLjnLfLsku8HBI83YyTfKQFgFpL9Pv-A0K7zC1rF5XZ1SOz6QON2PRwG-1uZuV/exec'; // Add your Google Apps Script URL here
+    const forms = ['hero-form', 'enquiry-form', 'modal-form'];
+
+    forms.forEach(id => {
+        const form = document.getElementById(id);
+        if (form) {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+
+                // 1. Fire the request in the background
+                // 'keepalive: true' ensures the request completes even after the page redirects
+                if (scriptURL) {
+                    fetch(scriptURL, { 
+                        method: 'POST', 
+                        mode: 'no-cors', 
+                        keepalive: true, 
+                        body: new FormData(form) 
+                    }).catch(error => console.error('Background submission error:', error));
+                }
+
+                // 2. Redirect immediately without waiting
+                window.location.href = "thank.html";
+            });
+        }
+    });
+
+    // Auto open modal after 5 seconds
+    setTimeout(() => {
+        // openModal(); 
+        // Uncomment above line to enable auto-popup
+    }, 5000);
+</script>
+
+</body>
+</html>
